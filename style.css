@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+:root {
+    --clr-black: rgb(27, 25, 25);
+    --clr-white: rgb(245, 245, 245);
+
+    --font-size: 12px;
+    --border-radius: 0.2em;
+
+    --font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+nav {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    width: 100vw;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 2em;
+
+}
+nav li {
+    font-size: 0.8em;
+    padding-right: 2em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+nav li:first-child {
+    margin-right: auto;
+}
