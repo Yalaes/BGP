@@ -1,15 +1,16 @@
 * {
+    overflow-x: hidden;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 :root {
     --clr-black: rgb(27, 25, 25);
     --clr-white: rgb(245, 245, 245);
+    --clr-gray-200: rgb(245, 245, 245);
 
+    --font-family: 'Monserrat', sans-serif;
     --font-size: 11px;
     --border-radius: 0.2em;
-    --font-family: sans-serif;
 }
 
 a {
@@ -18,9 +19,12 @@ a {
 }
 
 body {
+
     margin: 0;
+    padding: 0;
     font-family: var(--font-family);
     font-size: var(--font-size);
+
 }
 
 nav {
@@ -29,28 +33,29 @@ nav {
     width: 100vw;
     display: flex;
     justify-content: flex-start;
-    align-items:center;
+    align-items: center;
 }
 
 nav ul {
+    list-style: none;
     margin-right: 1em;
     display: flex;
     justify-content: flex-end;
-    align-items:center;  
+    align-items: center;
     height: 2.5em;
 
 }
+
 nav li {
-    margin: 0 1em;
+    margin: 0 0.5em;
+    font-size: 1em;
     text-transform: uppercase;
     font-weight: 600;
     cursor: pointer;
     text-align: center;
-    transition: 200ms ease-in;
-    /* border-radius: var(--border-radius); */
 }
-nav li:hover {
 
+nav li:hover {
     border-bottom: 2px solid var(--clr-white);
 }
 
@@ -60,52 +65,129 @@ nav li:hover {
     border: none;
     font-size: 2em;
     position: relative;
-    left: 0.5em;
+    left: 1em;
 }
 
 #banner {
     width: 100vw;
     height: 95vh;
     color: var(--clr-white);
-    /* filter: brightness(0.44); */
-    display: grid;
-    justify-content: start;
     background-color: var(--clr-black);
     background-image: url(../images/banner-v.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    letter-spacing: 0.4em;
 }
 
 #banner-text {
-    margin: 2em 1em;
+    padding-top: 25vh;
     text-transform: uppercase;
-    text-align: left;
-    display: inline;
+    text-align: center;
+    width: 100%;
 }
+
 #banner-text h1 {
     margin: 0;
-    font-size: 6em;
+    font-size: clamp(1em, 15vw, 15vh);
 }
 
 #banner-text h2 {
-    font-size: 2em;
+    font-size: clamp(1em, 4vw, 4vh);
 }
 
-@media only screen and (orientation: landscape) {
-    #banner {
-        background-image: url(../images/banner-h.jpg);
-        background-size: cover;
-    }
-    body {
-        --font-size:12px;
-    }
+main {
+    letter-spacing: 0.1em;
+    line-height: 1.6;
 }
 
-@media only screen and (min-width: 550px){
-    body {
-        --font-size: 16px;
-    }
-    
+#why,
+#how, #where {
+    font-size: 1.5em;
 }
 
+#why-title,
+#how-title, #where-title {
+    margin-top: 1em;
+    background-color: var(--clr-black);
+    padding: 0.5em 1em;
+    text-align: center;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#why-content,
+#how-content {
+    margin: 1em 0.5em;
+}
+
+#why-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#how-content {
+    margin: 1em auto;
+    padding: 0.5em;
+    max-width: 800px;
+}
+#where-content {
+    margin: 1em 0;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-gap: 1em; */
+    justify-items: center;
+}
+.where-card{
+    width: 90%;
+    border: 1px solid black;
+    margin: 0 1em 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.where-card a {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    padding: 0.2em 0.5em;
+    font-weight: 700;
+    font-size: 0.9em;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+.where-card:hover  a {
+    border: 4px solid var(--clr-black);
+}
+.where-card img {
+    width: clamp(50px, 30vw, 100px);
+    object-fit:fill;  
+    border-radius: 50%;
+}
+
+
+
+.card {
+    margin: 1em 0.5em;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.card {
+    flex: 0 1 80vw;
+}
+
+.why-card-title {
+    width: fit-content;
+    font-weight: bold;
+    border-bottom: 1px solid var(--clr-black);
+}
+
+.card p {
+    text-align: left;
+}
