@@ -13,10 +13,7 @@
     --border-radius: 0.5em;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+
 
 body {
     margin: 0;
@@ -25,11 +22,17 @@ body {
     font-size: var(--font-size);
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 nav {
     background-color: var(--clr-black);
     color: var(--clr-white);
     display: flex;
     align-items: center;
+    font-size: 0.9em;
 }
 
 nav ul {
@@ -103,7 +106,7 @@ main {
 }
 
 #why-content {
-    margin: 1em;
+    margin: 1em 2em;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1em;
@@ -111,14 +114,15 @@ main {
 
 #how-content {
     margin: 1em auto;
-    padding: 0 1em;
+    padding: 0 2em;
     max-width: 800px;
 }
 
 .card {
     margin: 1em 0.5em;
     padding: 1em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 /* 
 .card {
@@ -146,9 +150,10 @@ main {
 .where-card {
     width: 100%;
     max-width: 300px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 1em;
     padding: 1em;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -180,7 +185,6 @@ main {
     grid-template-columns: 1fr;
     justify-items: center;
     margin: 2em;
-    margin-bottom: 5em;
 }
 
 .testimonial-card {
@@ -219,4 +223,35 @@ main {
     font-weight: 600;
     background-color: var(--clr-gray-200);
     border-radius: var(--border-radius);
+}
+
+footer {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    font-weight: 600;
+    padding: 1em;
+}
+
+footer ul {
+    margin: 1em 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+footer li {
+    padding: 0 1em;
+}
+footer li img {
+    width: clamp(40px, 10vw, 60px );
+    object-fit: cover;
+    align-self: center;
+}
+.footer-text {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.2em 0;
+    text-align: center;
 }
