@@ -1,6 +1,7 @@
-* {
-    overflow-x: hidden;
-    box-sizing: border-box;
+*,
+:after,
+:before {
+    box-sizing: border-box
 }
 
 :root {
@@ -10,6 +11,7 @@
 
     --font-family: 'Monserrat', sans-serif;
     --font-size: 13px;
+    --border: 1px solid #dfe1e3;
     --border-radius: 0.5em;
 }
 
@@ -35,7 +37,7 @@ nav {
     font-size: 0.9em;
 }
 
-nav ul {
+ul {
     list-style: none;
     margin-right: 1em;
     display: flex;
@@ -113,7 +115,7 @@ main {
 }
 
 #how-content {
-    margin: 1em auto;
+    margin: 2em auto;
     padding: 0 2em;
     max-width: 800px;
 }
@@ -121,13 +123,8 @@ main {
 .card {
     margin: 1em 0.5em;
     padding: 1em;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border: var(--border);
 }
-/* 
-.card {
-    flex: 0 1 80vw;
-} */
 
 .why-card-title {
     width: fit-content;
@@ -150,10 +147,10 @@ main {
 .where-card {
     width: 100%;
     max-width: 300px;
-    /* border: 1px solid black; */
+    border: var(--border);
     margin: 1em;
     padding: 1em;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+   
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -164,8 +161,8 @@ main {
     background-color: var(--clr-black);
     color: var(--clr-white);
     padding: 0.2em 0.5em;
+    text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.9em;
     border: 2px solid white;
     border-radius: 10px;
 }
@@ -191,7 +188,7 @@ main {
     margin-bottom: 2em;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: var(--border);
     width: 100%;
     justify-content: space-between;
     align-items: center;
