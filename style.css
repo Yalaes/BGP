@@ -79,14 +79,17 @@ nav li:hover {
     text-align: center;
 }
 
-#banner-text h1 {
+#banner-text-main {
+    display: block;
     margin: 0;
+    letter-spacing: 0.2em;
     font-size: clamp(1em, 14vw, 12vh);
 }
 
-#banner-text h2 {
+.banner-text-sub {
+    display: block;
     margin: 0.5em;
-    font-size: clamp(1em, 4vw, 4vh);
+    font-size: 0.8em;
 }
 
 main {
@@ -96,7 +99,8 @@ main {
 
 #why-title,
 #how-title,
-#where-title, #who-title {
+#where-title,
+#who-title {
     padding: 0.5em 1em;
     color: var(--clr-white);
     background-color: var(--clr-black);
@@ -105,9 +109,11 @@ main {
     text-transform: uppercase;
     font-weight: 700;
 }
+
 #why-title {
     margin-top: 1.5em;
 }
+
 #why-content {
     margin: 1em 2em;
     display: grid;
@@ -120,6 +126,7 @@ main {
     padding: 0 2em;
     max-width: 800px;
 }
+
 #how-content p {
     padding: 1em;
 }
@@ -145,13 +152,13 @@ main {
     padding: 1em;
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center; 
+    justify-items: center;
 }
 
 .where-card {
     width: 90%;
     border: var(--border);
-    padding: 1em; 
+    padding: 1em;
     margin: 1em;
     display: flex;
     flex-direction: column;
@@ -172,7 +179,7 @@ main {
     font-size: 0.8em;
     border: 2px solid white;
     border-radius: 10px;
-    
+
 }
 
 .where-card:hover a {
@@ -198,22 +205,19 @@ main {
     display: flex;
     flex-direction: column;
     border: var(--border);
-    justify-content: space-between;
     align-items: center;
     padding: 1em;
 }
 
-.testimonial-card h3 {
-    font-size: 1.2em;
-    margin: 0;
-}
 
-.testimonial-card img{
+
+.testimonial-card img {
     max-width: 70px;
     border-radius: 50%;
     object-fit: cover;
 
 }
+
 .testimonial-star img {
     margin: 0 0.1em;
     width: 20px;
@@ -221,13 +225,11 @@ main {
 }
 
 .testimonial-card blockquote {
-    /* height: 50%; */
-    
     margin: 0.5em;
+    margin-bottom: auto;
     padding: 1em 1.5em;
     background-color: var(--clr-gray-200);
     border-radius: var(--border-radius);
-    vertical-align: middle;
 }
 
 footer {
@@ -242,17 +244,17 @@ footer ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-
 }
+
 footer li {
     padding: 0 1em;
 }
+
 footer li img {
-    width: clamp(40px, 10vw, 60px );
+    width: clamp(40px, 10vw, 60px);
     object-fit: cover;
-    align-self: center;
 }
+
 .footer-text {
     display: block;
     width: 80%;
@@ -267,13 +269,13 @@ footer li img {
     }
 
     #why-content {
-     
+
         grid-template-columns: 1fr 1fr;
-     
+
     }
 
     #where-content {
-      
+
         grid-template-columns: 1fr 1fr 1fr;
 
     }
@@ -282,10 +284,9 @@ footer li img {
 
 @media only screen and (min-width: 800px) {
     #testimonial-content {
-       
+
         grid-template-columns: 1fr 1fr;
-      
+
     }
 
 }
-
