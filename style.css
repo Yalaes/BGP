@@ -7,7 +7,7 @@
 }
 
 :root {
-    --clr-black: rgb(27, 25, 25);
+    --clr-black: rgb(51, 51, 51);
     --clr-white: rgb(245, 245, 245);
     --clr-gray-200: rgb(245, 245, 245);
 
@@ -25,6 +25,8 @@ body {
     font-family: var(--font-family);
     font-size: var(--font-size);
     overflow-x: hidden;
+    position: relative;
+    color: var(--clr-black);
 }
 
 a {
@@ -33,11 +35,13 @@ a {
 }
 
 nav {
+    width: 100%;
     padding: 1rem 0;
-    background-color: var(--clr-black);
+    background-color: rgba(0, 0, 0, 0.6);
     color: var(--clr-white);
     display: flex;
     align-items: center;
+    position: absolute;
 }
 
 ul {
@@ -65,10 +69,11 @@ nav li:hover {
     border: none;
     position: relative;
     left: 1rem;
-}
+    font-weight: 800;
+    font-size: 1.2rem;}
 
 #banner {
-    height: 95vh;
+    height: 100vh;
     color: var(--clr-white);
     background-image: url(../images/banner-v.jpg);
     background-position: center;
@@ -81,7 +86,6 @@ nav li:hover {
 #banner-text {
     text-transform: uppercase;
     text-align: center;
-    /* margin: 1rem; */
     padding: 1rem;
 }
 
