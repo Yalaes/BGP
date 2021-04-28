@@ -7,8 +7,8 @@
 }
 
 :root {
-    --clr-black: rgb(51, 51, 51);
-    --clr-white: rgb(245, 245, 245);
+    --clr-black: rgb(39, 39, 39);
+    --clr-white: rgb(235, 235, 235);
     --clr-gray-200: rgb(245, 245, 245);
 
     --font-family: 'Monserrat', sans-serif;
