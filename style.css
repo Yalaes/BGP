@@ -3,7 +3,8 @@
 :before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+    
 }
 
 :root {
@@ -18,15 +19,26 @@
 }
 
 html {
+    box-sizing: border-box;
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--font-family);
     font-size: var(--font-size);
-    overflow-x: hidden;
-    position: relative;
     color: var(--clr-black);
+    line-height: 1.6;
+}
+
+.content {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.scroll-padding {
+    padding-top: 3rem;
 }
 
 a {
@@ -34,14 +46,18 @@ a {
     color: inherit;
 }
 
-nav {
-    width: 100%;
-    padding: 1rem 0;
-    background-color: rgba(0, 0, 0, 0.6);
+nav {   
+    width: 100vw;
+    background-color: var(--clr-black); 
+}
+
+.nav__content {
+    padding: 1rem 2rem;
+    background-color:inherit;
     color: var(--clr-white);
     display: flex;
     align-items: center;
-    position: absolute;
+   
 }
 
 ul {
@@ -72,7 +88,7 @@ nav li:hover {
     font-weight: 800;
     font-size: 1.2rem;}
 
-#banner {
+#banner {  
     height: 100vh;
     color: var(--clr-white);
     background-image: url(../images/banner-v.jpg);
@@ -83,7 +99,7 @@ nav li:hover {
     place-items: center;
 }
 
-#banner-text {
+#banner-text {  
     text-transform: uppercase;
     text-align: center;
     padding: 1rem;
@@ -99,7 +115,7 @@ nav li:hover {
 .banner-text-sub {
     display: block;
     padding: 0.5rem 0;
-    font-size: .9rem;
+    font-size: 1.4rem;
 }
 
 main {
@@ -121,20 +137,20 @@ main {
 }
 
 #why-title {
-    margin-top: 1.5rem;
+    padding-top: 1.5rem;
 }
 
 #why-content {
-    margin: 1rem;
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
 }
 
 #how-content {
-    margin: 1.5rem auto;
+    margin-top: 3rem;
     padding: 0 2rem;
-    max-width: 800px;
+   
 }
 
 #how-content p {
@@ -178,6 +194,7 @@ main {
 
 .where-card p {
     margin: 0.5rem 0;
+    text-align: center;
 }
 
 .where-card a {
@@ -189,6 +206,7 @@ main {
     font-size: 0.8rem;
     border: 2px solid white;
     border-radius: 10px;
+    text-align: center;
 
 }
 
@@ -265,12 +283,20 @@ footer li img {
     object-fit: cover;
 }
 
-.footer-text {
-    display: block;
+.footer-text, .footer-credit {
     width: 80%;
     margin: 0 auto;
     padding: 1.2rem 0;
     text-align: center;
+}
+
+.footer-credit {
+    padding: 0;
+    color: grey;
+}
+
+.footer-credit a {
+    color: #33ABDC;
 }
 
 @media only screen and (orientation: landscape) {
