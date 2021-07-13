@@ -47,6 +47,10 @@ a {
     color: inherit;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 nav {   
     width: 100vw;
     background-color: var(--clr-black); 
@@ -118,8 +122,10 @@ nav li:hover {
 
 .banner-text-sub {
     display: block;
-    padding-top: 1.5rem;
+    text-transform: lowercase;
+    padding-top: .5rem;
     font-size: 1rem;
+    letter-spacing: 0.1rem;
 }
 
 .scroll-icon {
@@ -128,7 +134,8 @@ nav li:hover {
     bottom: 10%;
     transform: translateX(-50%);
     /* padding-top: 10%; */
-    width: 2rem;
+    width: 1.5rem;
+    opacity: .7;
 }
 
 main {
@@ -203,6 +210,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: all .25s ease;
 }
 
 .where-card p {
@@ -220,12 +228,17 @@ main {
     border: 2px solid white;
     border-radius: 10px;
     text-align: center;
+}
 
+.line-link {
+    background-color: #00C854 !important;
 }
 
 .where-card:hover a {
-    border: 2px solid var(--clr-black);
+    transform: scale(1.05);
+    transition: all .25s ease;
 }
+
 
 .where-card img {
     width: clamp(50px, 30vw, 80px);
