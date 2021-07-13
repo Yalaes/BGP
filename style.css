@@ -128,7 +128,7 @@ nav li:hover {
     bottom: 10%;
     transform: translateX(-50%);
     /* padding-top: 10%; */
-    width: 1rem;
+    width: 2rem;
 }
 
 main {
@@ -206,14 +206,14 @@ main {
 }
 
 .where-card p {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     text-align: center;
 }
 
 .where-card a {
     background-color: var(--clr-black);
     color: var(--clr-white);
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 1rem;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.8rem;
@@ -238,7 +238,7 @@ main {
     margin-bottom: 4rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    gap: 2rem;
     justify-content: center;
 
 }
@@ -257,8 +257,11 @@ main {
     object-fit: cover;
 }
 
+.testimonial-card h3 {
+    margin-top: .5rem;
+}
 .testimonial-star img {
-    margin: 0 0.1rem;
+    margin: .5rem 0.1rem;
     width: 20px;
     object-fit: cover;
 }
@@ -276,6 +279,7 @@ footer {
     color: var(--clr-white);
     font-weight: 600;
     padding: 1rem;
+    font-size: .8rem;
 }
 
 footer ul {
@@ -290,14 +294,14 @@ footer li {
 }
 
 footer li img {
-    width: clamp(40px, 10vw, 60px);
+    width: clamp(20px, 5vw, 40px);
     object-fit: cover;
 }
 
 .footer-text, .footer-credit {
     width: 80%;
     margin: 0 auto;
-    padding: 1.2rem 0;
+    padding: .8rem 0;
     text-align: center;
 }
 
@@ -342,9 +346,7 @@ footer li img {
     }
 
     #where-content {
-
-        grid-template-columns: 1fr 1fr 1fr;
-
+        grid-template-columns: 1fr 1fr;
     }
 
 }
