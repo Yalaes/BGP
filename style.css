@@ -53,13 +53,13 @@ a {
 
 nav {   
     width: 100vw;
-    background-color: var(--clr-black); 
+    /* background-color: var(--clr-black);  */
     position: absolute;
     font-size: .8rem;  
 }
 
 .nav__content {
-    padding: 1rem 1%;
+    padding: 1rem 2%;
     background-color:inherit;
     color: var(--clr-white);
     display: flex;
