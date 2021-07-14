@@ -67,7 +67,7 @@ nav {
 }
 
 
-ul {
+nav ul {
     list-style: none;
     margin-right: 0.5rem;
     display: flex;
@@ -180,6 +180,20 @@ main {
 #how-content p {
     padding: 1rem 0;
 }
+
+.how-lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 0;
+    gap: 2rem;
+}
+
+.how-lists ul {
+    padding-left: 1rem;
+}
+
 
 .card {
     margin: 0.5rem;
@@ -396,6 +410,12 @@ footer li img {
 @media only screen and (min-width: 640px) {
     body {
         --font-size: 1rem;
+    }
+
+    .how-lists {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     #why-content {
