@@ -98,9 +98,13 @@ nav li:hover {
 #banner {  
     height: 100vh;
     color: var(--clr-white);
-    background-image: url(../images/banner-v.jpg);
-    background-position: center;
+
+    background-color: var(--clr-black);
+    background-image: url(../images/hero-v-640.jpg);
+    background-position: bottom center;
     background-size: cover;
+    background-repeat: no-repeat;
+
     letter-spacing: 0.4rem;
     display: grid;
     place-items: center;
@@ -291,7 +295,7 @@ footer {
     background-color: var(--clr-black);
     color: var(--clr-white);
     font-weight: 600;
-    padding: 1rem;
+    padding: 2rem 2%;
     font-size: .8rem;
 }
 
@@ -307,7 +311,7 @@ footer li {
 }
 
 footer li img {
-    width: clamp(20px, 5vw, 40px);
+    width: clamp(30px, 5vw, 40px);
     object-fit: cover;
 }
 
@@ -321,6 +325,7 @@ footer li img {
 .footer-credit {
     padding: 0;
     color: grey;
+    padding-bottom: .5rem;
 }
 
 .footer-credit a {
@@ -368,11 +373,11 @@ footer li img {
     background-color: #E8E8E8;
 }
 
-@media only screen and (orientation: landscape) {
+/* @media only screen and (orientation: landscape) {
     #banner {
         background-image: url(../images/banner-h.jpg);
     }
-}
+} */
 
 @media only screen and (min-width: 400px) {
     nav {
