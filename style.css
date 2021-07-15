@@ -51,27 +51,36 @@ a {
     font-weight: bold;
 }
 
+.photo {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+}
+
+.photo-why {
+    margin-top: 2rem;
+}
+
 nav {   
     width: 100vw;
     /* background-color: var(--clr-black);  */
     position: absolute;
-    font-size: .8rem;  
+    font-size: .6rem;  
 }
 
 .nav__content {
     padding: 1rem 2%;
     background-color:inherit;
     color: var(--clr-white);
-    display: flex;
-    align-items: center;  
+    
 }
 
 
 nav ul {
     list-style: none;
-    margin-right: 0.5rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -79,12 +88,23 @@ nav li {
     margin: 0 .3rem;
     text-transform: uppercase;
     font-weight: 600;
-    /* font-size: 1rem; */
-
+    transition: transform .24s ease;
 }
 
-nav li:hover {
-    border-bottom: 2px solid var(--clr-white);
+
+nav li:hover, nav li:focus {
+    transform: scale(1.1);
+}
+
+.cta {
+    color: var(--clr-black);
+    background-color: var(--clr-white);
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+}
+
+nav li:hover .cta {
+    border-bottom: none;
 }
 
 #logo {
@@ -93,7 +113,10 @@ nav li:hover {
     position: relative;
     left: 1rem;
     font-weight: 800;
-    font-size: 1.2rem;}
+    font-size: 1.2rem;
+    padding-bottom: 2px;
+    display: none;
+}
 
 #banner {  
     height: 100vh;
@@ -101,7 +124,7 @@ nav li:hover {
 
     background-color: var(--clr-black);
     background-image: url(../images/hero-v-640.jpg);
-    background-position: bottom center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -126,7 +149,7 @@ nav li:hover {
 
 .banner-text-sub {
     display: block;
-    text-transform: lowercase;
+    text-transform: capitalize;
     padding-top: .5rem;
     font-size: 1rem;
     letter-spacing: 0.1rem;
@@ -193,7 +216,6 @@ main {
 .how-lists ul {
     padding-left: 1rem;
 }
-
 
 .card {
     margin: 1rem;
@@ -389,15 +411,25 @@ footer li img {
     background-color: #E8E8E8;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 280px) {
     nav {
-        font-size: 1rem;
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+   
+    #logo {
+        display: block;
     }
 
-    nav li {
-        margin: 0 .7rem;
+    .nav__content {
+        display: flex;
+    justify-content: center;
+    align-items: center;  
     }
 
+   
     .banner-text-sub {
         font-size: 1.4rem;
     }
@@ -407,6 +439,15 @@ footer li img {
     body {
         --font-size: 1rem;
     }
+
+    nav {
+        font-size: 1rem;
+    }
+
+    nav li {
+        margin: .5rem 1rem;
+    }
+
 
     .how-lists {
         flex-direction: row;
@@ -433,7 +474,6 @@ footer li img {
         width: 2rem;
         height: 2.5rem;
     }
-    
 
 }
 
