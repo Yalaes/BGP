@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    
+
 }
 
 :root {
@@ -29,6 +29,7 @@ body {
     font-size: var(--font-size);
     color: var(--clr-black);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .content {
@@ -60,20 +61,21 @@ a {
 
 .photo-why {
     margin-top: 2rem;
+    max-width: 40%;
 }
 
-nav {   
-    width: 100vw;
+nav {
+    width: 100%;
     /* background-color: var(--clr-black);  */
     position: absolute;
-    font-size: .6rem;  
+    font-size: .6rem;
 }
 
 .nav__content {
-    padding: 1rem 2%;
-    background-color:inherit;
+    padding: 1% 2%;
+    background-color: inherit;
     color: var(--clr-white);
-    
+
 }
 
 
@@ -92,7 +94,8 @@ nav li {
 }
 
 
-nav li:hover, nav li:focus {
+nav li:hover,
+nav li:focus {
     transform: scale(1.1);
 }
 
@@ -118,7 +121,7 @@ nav li:hover .cta {
     display: none;
 }
 
-#banner {  
+#banner {
     height: 100vh;
     color: var(--clr-white);
 
@@ -133,7 +136,7 @@ nav li:hover .cta {
     place-items: center;
 }
 
-#banner-text {  
+#banner-text {
     text-transform: uppercase;
     text-align: center;
     padding: 1rem;
@@ -144,7 +147,8 @@ nav li:hover .cta {
     margin: 0;
     letter-spacing: 0.2rem;
     line-height: 1.2;
-    font-size: clamp(1rem, 12vw, 10vh);
+    font-size: clamp(1rem, 12vw, 12vh);
+
 }
 
 .banner-text-sub {
@@ -158,7 +162,7 @@ nav li:hover .cta {
 .scroll-icon {
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 5%;
     transform: translateX(-50%);
     /* padding-top: 10%; */
     width: 1.5rem;
@@ -197,7 +201,7 @@ main {
 #how-content {
     margin-top: 3rem;
     /* padding: 0 2rem; */
-   
+
 }
 
 #how-content p {
@@ -314,6 +318,7 @@ main {
 .testimonial-card h3 {
     margin-top: .5rem;
 }
+
 .testimonial-star img {
     margin: .5rem 0.1rem;
     width: 20px;
@@ -353,7 +358,8 @@ footer li img {
     object-fit: cover;
 }
 
-.footer-text, .footer-credit {
+.footer-text,
+.footer-credit {
     width: 80%;
     margin: 0 auto;
     padding: .8rem 0;
@@ -370,7 +376,7 @@ footer li img {
     color: #33ABDC;
 }
 
-.top-link {  
+.top-link {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -384,7 +390,7 @@ footer li img {
     height: 2.5rem;
     z-index: 20000;
     cursor: pointer;
-    background-color: rgba(190,190,190, .3);
+    background-color: rgba(190, 190, 190, .3);
     transition: all .25s ease-in-out;
     visibility: hidden;
 }
@@ -411,6 +417,52 @@ footer li img {
     background-color: #E8E8E8;
 }
 
+@media only screen and (orientation: landscape) {
+    #banner-text {
+        text-align: left;
+        padding-left: 4%;
+        padding-top: 5vh;
+    }
+
+    #banner-text-main {
+        max-width: 8ch;
+        line-height: 1;
+        font-size: clamp(1rem, 12vw, 15vh);
+    }
+
+    #banner {
+        background-color: black;
+        background-image: url(../images/hero-h-800.jpg);
+        background-position: 35vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+}
+
+
+@media only screen and (min-width:640px) and (orientation: landscape) {
+
+    #banner {
+        
+        background-image: url(../images/hero-h-1200.jpg);
+        /* background-position: 80%; */
+        
+
+    }
+}
+
+@media only screen and (min-width:800px) and (orientation: landscape) {
+
+    #banner {
+        
+        background-image: url(../images/hero-h-1540.jpg);
+        /* background-position: 80%; */
+        
+
+    }
+}
+
 @media only screen and (min-width: 280px) {
     nav {
         font-size: .8rem;
@@ -418,18 +470,18 @@ footer li img {
 }
 
 @media only screen and (min-width: 400px) {
-   
+
     #logo {
         display: block;
     }
 
     .nav__content {
         display: flex;
-    justify-content: center;
-    align-items: center;  
+        justify-content: center;
+        align-items: center;
     }
 
-   
+
     .banner-text-sub {
         font-size: 1.4rem;
     }
@@ -485,5 +537,3 @@ footer li img {
     }
 
 }
-
-
