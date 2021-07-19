@@ -355,6 +355,20 @@
 * Browsers: last 10 version
 */
 
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
 *,
 :after,
 :before {
@@ -407,6 +421,15 @@ a {
     color: inherit;
 }
 
+h2 {
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 1rem;
+    padding-bottom: .5rem;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -414,6 +437,7 @@ a {
 .photo {
     display: block;
     max-width: 50%;
+    height: auto;
     margin: 0 auto;
     margin-top: 2.5rem;
 }
@@ -425,13 +449,12 @@ a {
 
 nav {
     width: 100%;
-    /* background-color: var(--clr-black);  */
     position: absolute;
     font-size: .6rem;
 }
 
 .nav__content {
-    padding: 1% 2%;
+    padding: 2%;
     background-color: inherit;
     color: var(--clr-white);
 
@@ -495,7 +518,7 @@ nav li:hover .cta {
 #banner {
     height: 100vh;
     color: var(--clr-white);
-    background-color: var(--clr-black);
+    background-color: #000;
     background-image: url(../images/hero-v-640.jpg);
     background-position: center;
     background-size: cover;
@@ -675,6 +698,7 @@ main {
 
 .line-link {
     background-color: #00C854 !important;
+    color: #000 !important;
 }
 
 .where-card:hover a {
@@ -689,6 +713,7 @@ main {
 
 .where-card img {
     width: clamp(50px, 30vw, 80px);
+    height: auto;
     -o-object-fit: fill;
        object-fit: fill;
     border-radius: 50%;
@@ -725,7 +750,8 @@ main {
 }
 
 .testimonial-card img {
-    max-width: 70px;
+    max-width: 6rem;
+    height: auto;
     border-radius: 50%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -776,6 +802,7 @@ footer li {
 
 footer li img {
     width: clamp(30px, 5vw, 40px);
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
 }
@@ -790,7 +817,6 @@ footer li img {
 
 .footer-credit {
     padding: 0;
-    color: grey;
     padding-bottom: .5rem;
 }
 
